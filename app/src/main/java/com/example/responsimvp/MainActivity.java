@@ -7,8 +7,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.responsimvp.presenter.ILoginPresenter;
+import com.example.responsimvp.Interface.ILoginPresenter;
 import com.example.responsimvp.presenter.LoginPresenter;
+
+import java.util.logging.ErrorManager;
 
 public class MainActivity extends AppCompatActivity {
     EditText edtEmail;
@@ -40,11 +42,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onLoginSucces(String message) {
-        Toasty.succses(this, message, Toast.LENGTH_SHORT).show();
+        Object Toasty;
+        Toasty.makeText(this, message, Toast.LENGTH_SHORT).show();
 
     }
     @Override
     public void onLoginError (String message){
+        ErrorManager Toasty;
         Toasty.error(this, message, Toast.LENGTH_SHORT).show();
     }
 }

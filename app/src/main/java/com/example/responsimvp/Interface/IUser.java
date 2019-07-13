@@ -1,4 +1,4 @@
-package com.example.responsimvp.model;
+package com.example.responsimvp.Interface;
 
 public interface IUser {
     String getEmail();
